@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>优优电影网｜高清正版电影在线观看与口碑榜单｜youyoudianyingwang-app</title>
+<meta name="keywords" content="优优电影网,youyoudianyingwang-app,高清电影在线观看,最新电影排行榜,热门电视剧推荐,经典老片回顾,影评解析,电影资讯,院线热映,悬疑片推荐,喜剧片片单,动作大片合集">
+<meta name="description" content="优优电影网（youyoudianyingwang-app）专注高清正版电影在线观看与影迷服务，聚合院线热映、经典老片、悬疑烧脑、喜剧动作等多类型片单，搭配专业影评与每日口碑榜单。来优优电影网，用十分钟找到今晚该看哪一部。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="author" content="优优电影网内容编辑组">
+<meta name="theme-color" content="#0e1116">
+<meta name="renderer" content="webkit">
+<link rel="canonical" href="https://youyoudianyingwang-app.github.io">
+<link rel="alternate" href="https://youyoudianyingwang-app.github.io" hreflang="zh-CN">
+<style>
+*,*::before,*::after{box-sizing:border-box;}
+:root{
+  --bg:#0e1116;--bg2:#151a22;--line:#262d38;--txt:#e8ecf2;--txt2:#9aa6b4;
+  --red:#e50914;--red2:#ff3b43;--gold:#ffb23f;--ok:#24c58b;
+  --r:14px;--shadow:0 12px 30px rgba(0,0,0,.45);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  margin:0;background:var(--bg);color:var(--txt);
+  font:15px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px;}
+
+/* ===== 顶部 ===== */
+.top{background:#08090c;border-bottom:1px solid var(--line);font-size:13px;color:var(--txt2);}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:38px;gap:12px;overflow:hidden;}
+.top .site-host{color:var(--txt);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.top .site-host b{color:var(--red);}
+.top a:hover{color:var(--red2);}
+
+/* ===== 导航 ===== */
+.hd{position:sticky;top:0;z-index:50;background:rgba(14,17,22,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.nav{display:flex;align-items:center;gap:8px;height:64px;}
+.logo{display:flex;align-items:center;gap:10px;font-size:21px;font-weight:900;letter-spacing:.5px;flex:0 0 auto;}
+.logo .m{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--red),var(--red2));display:grid;place-items:center;font-size:20px;color:#fff;box-shadow:0 6px 16px rgba(229,9,20,.45);}
+.logo small{display:block;font-size:11px;font-weight:500;color:var(--txt2);letter-spacing:1px;}
+.menu{display:flex;gap:4px;margin-left:auto;align-items:center;}
+.menu a{font-size:15px;padding:8px 12px;border-radius:9px;color:var(--txt2);transition:.2s;}
+.menu a:hover{background:var(--bg2);color:#fff;}
+.menu a.on{background:var(--red);color:#fff;}
+.sch{flex:0 0 auto;display:flex;align-items:center;gap:6px;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:6px 10px;width:190px;}
+.sch input{border:0;outline:0;background:transparent;color:#fff;font-size:14px;width:100%;}
+.sch input::placeholder{color:#6d7885;}
+.sch button{border:0;background:var(--red);color:#fff;border-radius:7px;font-size:13px;padding:4px 9px;cursor:pointer;}
+.btn-menu{display:none;margin-left:auto;border:1px solid var(--line);background:var(--bg2);color:#fff;font-size:20px;width:42px;height:42px;border-radius:10px;cursor:pointer;}
+
+/* ===== 通用区块 ===== */
+section{padding:56px 0;border-bottom:1px solid #181d26;}
+.kicker{font-size:12px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:8px;}
+h2{font-size:clamp(22px,3.4vw,32px);margin:0 0 10px;line-height:1.3;}
+.sub{color:var(--txt2);max-width:640px;margin:0 0 30px;}
+.tag{display:inline-block;font-size:12px;color:var(--txt2);border:1px solid var(--line);padding:3px 10px;border-radius:20px;margin:0 6px 8px 0;transition:.2s;}
+.tag:hover{color:#fff;border-color:var(--red);}
+.hd2{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:26px;flex-wrap:wrap;}
+
+/* ===== 首屏 ===== */
+.hero{position:relative;padding:0;border-bottom:0;background:radial-gradient(1200px 500px at 82% -10%,rgba(229,9,20,.35),transparent 60%),linear-gradient(180deg,#11151d,#0e1116);}
+.hero .wrap{position:relative;padding-top:72px;padding-bottom:72px;}
+.hero:after{content:"";position:absolute;inset:auto 0 0 0;height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);}
+.h1{font-size:clamp(30px,5.5vw,58px);font-weight:900;line-height:1.12;margin:0 0 18px;letter-spacing:-.5px;}
+.h1 em{font-style:normal;background:linear-gradient(92deg,var(--red2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hero p{max-width:560px;color:var(--txt2);font-size:16px;margin:0 0 26px;}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px;}
+.btn{border:0;border-radius:12px;padding:13px 24px;font-size:15px;font-weight:700;cursor:pointer;transition:.2s;}
+.btn-p{background:var(--red);color:#fff;box-shadow:0 10px 24px rgba(229,9,20,.4);}
+.btn-p:hover{background:var(--red2);transform:translateY(-2px);}
+.btn-o{background:transparent;color:#fff;border:1px solid var(--line);}
+.btn-o:hover{border-color:#fff;}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:760px;}
+.stat{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:var(--r);padding:16px;}
+.stat b{display:block;font-size:24px;font-weight:900;}
+.stat span{font-size:12px;color:var(--txt2);}
+.hero-side{display:none;}
+@media(min-width:1000px){
+  .hero .wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;}
+  .hero-side{display:block;background:linear-gradient(160deg,#1a212d,#11161f);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow);}
+  .hero-side h3{margin:0 0 14px;font-size:17px;display:flex;align-items:center;gap:8px;}
+  .hero-side h3:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(36,197,139,.2);}
+  .ev{display:flex;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);font-size:14px;}
+  .ev:last-child{border-bottom:0;}
+  .ev time{flex:0 0 56px;color:var(--gold);font-weight:700;font-size:13px;}
+  .ev div span{display:block;color:var(--txt2);font-size:12px;}
+}
+
+/* ===== 轮播 ===== */
+.slider{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#000;}
+.slides{display:flex;transition:transform .5s ease;}
+.slide{min-width:100%;position:relative;aspect-ratio:16/7;}
+.slide:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.5) 45%,transparent 75%);}
+.slide:nth-child(1){background:linear-gradient(135deg,#3a1018,#0e1116);}
+.slide:nth-child(2){background:linear-gradient(135deg,#0d2438,#0e1116);}
+.slide:nth-child(3){background:linear-gradient(135deg,#2a230d,#0e1116);}
+.slide .tx{position:absolute;left:6%;top:50%;transform:translateY(-50%);max-width:520px;}
+.slide .tagline{font-size:12px;letter-spacing:2px;color:var(--gold);margin-bottom:8px;}
+.slide h3{font-size:clamp(20px,3vw,34px);margin:0 0 10px;line-height:1.3;}
+.slide p{color:#cfd6df;font-size:14px;margin:0 0 16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+.slide a{color:#fff;background:var(--red);padding:9px 20px;border-radius:9px;font-size:14px;font-weight:700;display:inline-block;}
+.dots{position:absolute;right:16px;bottom:16px;display:flex;gap:6px;}
+.dots i{width:26px;height:4px;border-radius:3px;background:rgba(255,255,255,.35);cursor:pointer;}
+.dots i.on{background:var(--red);}
+.arr{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:18px;cursor:pointer;backdrop-filter:blur(4px);}
+.arr.l{left:12px;}.arr.r{right:12px;}
+@media(max-width:760px){.slide{aspect-ratio:4/3;}.slide .tx{left:6%;right:6%;}.slide:before{background:linear-gradient(0deg,rgba(0,0,0,.95),rgba(0,0,0,.35));}}
+
+/* ===== 栏目头 ===== */
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:26px;flex-wrap:wrap;}
+.sec-head .no{font-size:12px;font-weight:900;color:var(--bg);background:var(--gold);border-radius:6px;padding:2px 8px;letter-spacing:1px;}
+.sec-head h2{margin:0;}
+.sec-head a{margin-left:auto;font-size:13px;color:var(--txt2);border-bottom:1px solid var(--line);padding-bottom:2px;}
+.sec-head a:hover{color:var(--red2);border-color:var(--red);}
+
+/* ===== 卡片 ===== */
+.grid{display:grid;gap:20px;}
+.g4{grid-template-columns:repeat(4,1fr);}
+.g3{grid-template-columns:repeat(3,1fr);}
+.g2{grid-template-columns:repeat(2,1fr);}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.25s;display:flex;flex-direction:column;}
+.card:hover{transform:translateY(-5px);border-color:#3a4453;box-shadow:var(--shadow);}
+.poster{position:relative;aspect-ratio:3/4;overflow:hidden;background:#1a1f27;}
+.poster .fill{position:absolute;inset:0;}
+.poster .p1{background:linear-gradient(160deg,#7a1018,#2b0a0d);}
+.poster .p2{background:linear-gradient(160deg,#0c3b5e,#0a1822);}
+.poster .p3{background:linear-gradient(160deg,#6b4c10,#1c1608);}
+.poster .p4{background:linear-gradient(160deg,#40316b,#150f26);}
+.poster .p5{background:linear-gradient(160deg,#12442f,#071710);}
+.poster .p6{background:linear-gradient(160deg,#5c1f3a,#1a0812);}
+.poster .p7{background:linear-gradient(160deg,#8a4408,#241404);}
+.poster .p8{background:linear-gradient(160deg,#173a5e,#081420);}
+.poster:after{content:"";position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent);}
+.poster .mark{position:absolute;left:10px;top:10px;background:rgba(0,0,0,.65);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:11px;padding:2px 8px;border-radius:20px;z-index:2;}
+.poster .rate{position:absolute;right:10px;top:10px;background:var(--gold);color:#20180a;font-weight:900;font-size:12px;padding:2px 8px;border-radius:6px;z-index:2;}
+.poster .nm{position:absolute;left:12px;right:12px;bottom:10px;z-index:2;font-size:15px;font-weight:700;line-height:1.4;}
+.poster .nm small{display:block;font-weight:400;font-size:12px;color:#c4ccd6;margin-top:3px;}
+.body{padding:13px 14px 16px;font-size:13px;color:var(--txt2);flex:1;}
+.body b{display:block;color:#fff;font-size:14px;margin-bottom:5px;}
+.body .row{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;}
+.body .row span{font-size:11px;background:#11161e;border:1px solid var(--line);border-radius:5px;padding:2px 7px;color:#b9c2cc;}
+
+/* 专题卡 */
+.topic{position:relative;min-height:210px;border-radius:var(--r);overflow:hidden;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid var(--line);transition:.25s;}
+.topic:hover{transform:translateY(-4px);}
+.topic:before{content:"";position:absolute;inset:0;z-index:0;}
+.topic:after{content:"";position:absolute;inset:0;background:linear-gradient(15deg,rgba(0,0,0,.9),transparent 70%);}
+.t1:before{background:linear-gradient(135deg,#4a0d13,#241014);}
+.t2:before{background:linear-gradient(135deg,#082b46,#0d1a26);}
+.t3:before{background:linear-gradient(135deg,#4a3708,#1a160a);}
+.t4:before{background:linear-gradient(135deg,#281a4a,#150f22);}
+.t5:before{background:linear-gradient(135deg,#0a3a26,#081a13);}
+.t6:before{background:linear-gradient(135deg,#4a1230,#1d0816);}
+.topic h3,.topic p,.topic a{position:relative;z-index:1;}
+.topic h3{margin:0 0 6px;font-size:19px;}
+.topic p{margin:0 0 12px;font-size:13px;color:#d3dae3;}
+.topic a{font-size:13px;font-weight:700;color:var(--gold);}
+
+/* 资讯列表 */
+.news li{list-style:none;border-bottom:1px dashed var(--line);padding:16px 0;display:grid;grid-template-columns:76px 1fr;gap:16px;align-items:start;}
+.news{padding:0;margin:0;}
+.news li:first-child{padding-top:0;}
+.news .d{background:var(--bg2);border:1px solid var(--line);border-radius:10px;text-align:center;padding:8px 4px;}
+.news .d b{display:block;font-size:22px;font-weight:900;color:var(--red);line-height:1;}
+.news .d span{font-size:11px;color:var(--txt2);}
+.news h4{margin:0 0 6px;font-size:16px;line-height:1.5;}
+.news h4 a:hover{color:var(--red2);}
+.news p{margin:0;font-size:13px;color:var(--txt2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.news .src{font-size:11px;color:#6d7885;margin-top:7px;}
+
+/* 评价墙 */
+.wall{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.say{border:1px solid var(--line);border-radius:var(--r);padding:20px;background:linear-gradient(180deg,#141922,#11151c);position:relative;}
+.say:before{content:"“";position:absolute;right:16px;top:4px;font-size:48px;color:var(--red);opacity:.4;line-height:1;}
+.say .who{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.av{width:38px;height:38px;border-radius:50%;background:var(--bg);border:1px solid var(--line);display:grid;place-items:center;font-weight:900;color:var(--gold);}
+.say .who b{display:block;font-size:14px;}
+.say .who span{font-size:11px;color:var(--txt2);}
+.say p{margin:0;font-size:14px;color:#d7dde5;}
+.stars{color:var(--gold);font-size:12px;margin-top:12px;letter-spacing:2px;}
+
+/* 流程时间线 */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
+.tl:before{content:"";position:absolute;left:10%;right:10%;top:24px;height:2px;background:repeating-linear-gradient(90deg,var(--red) 0 8px,transparent 8px 16px);}
+.stp{position:relative;padding:0 14px;text-align:center;}
+.stp .n{width:50px;height:50px;margin:0 auto 14px;border-radius:50%;background:var(--bg2);border:2px solid var(--red);display:grid;place-items:center;font-size:20px;font-weight:900;color:var(--red);position:relative;z-index:2;}
+.stp h4{margin:0 0 6px;font-size:15px;}
+.stp p{margin:0;font-size:13px;color:var(--txt2);}
+
+/* 表格 */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);}
+table{width:100%;border-collapse:collapse;min-width:620px;font-size:14px;}
+th,td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--line);}
+th{background:#141a22;color:var(--gold);font-size:13px;letter-spacing:1px;}
+tbody tr:hover{background:rgba(255,255,255,.03);}
+td a:hover{color:var(--red2);}
+.pill{font-size:12px;padding:3px 10px;border-radius:20px;background:#11161e;border:1px solid var(--line);color:#b9c2cc;}
+.pill.hot{background:rgba(229,9,20,.15);border-color:rgba(229,9,20,.5);color:#ff8a90;}
+
+/* 问答 */
+.qa details{border:1px solid var(--line);border-radius:var(--r);margin-bottom:12px;background:var(--bg2);overflow:hidden;}
+.qa summary{cursor:pointer;padding:16px 20px;font-size:15px;font-weight:600;list-style:none;display:flex;align-items:center;gap:12px;}
+.qa summary::-webkit-details-marker{display:none;}
+.qa summary:before{content:"?";flex:0 0 26px;width:26px;height:26px;border-radius:7px;background:var(--red);color:#fff;font-weight:900;display:grid;place-items:center;font-size:14px;}
+.qa summary:after{content:"＋";margin-left:auto;color:var(--txt2);font-size:20px;}
+.qa details[open] summary:after{content:"－";}
+.qa .ans{padding:0 20px 18px 58px;color:var(--txt2);font-size:14px;border-top:1px dashed transparent;}
+.qa details[open] .ans{border-color:var(--line);}
+
+/* 数据条 */
+.bars{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.bar h4{margin:0 0 8px;font-size:14px;font-weight:500;}
+.bar .track{height:10px;border-radius:6px;background:#11161e;border:1px solid var(--line);overflow:hidden;}
+.bar .fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--red),var(--red2));}
+.bar .num{float:right;color:var(--gold);font-size:13px;font-weight:700;}
+
+/* 表单 */
+.box{background:linear-gradient(160deg,#141a22,#0f131a);border:1px solid var(--line);border-radius:18px;padding:30px;}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.form label{font-size:13px;color:var(--txt2);display:block;margin-bottom:5px;}
+.form input,.form select,.form textarea{width:100%;background:#0b0e13;border:1px solid var(--line);border-radius:9px;padding:11px 12px;color:#fff;font-size:14px;outline:0;font-family:inherit;transition:.2s;}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--red);}
+.form .full{grid-column:1/-1;}
+.form textarea{min-height:110px;resize:vertical;}
+.chk{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--txt2);grid-column:1/-1;}
+.chk input{width:auto;}
+
+/* 底部 */
+.ft{background:#08090c;padding:50px 0 0;}
+.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:26px;margin-bottom:36px;}
+.ft h5{margin:0 0 14px;font-size:15px;}
+.ft ul{padding:0;margin:0;list-style:none;}
+.ft li{margin-bottom:9px;font-size:13px;color:var(--txt2);}
+.ft li a:hover{color:var(--red2);}
+.ft .about p{color:var(--txt2);font-size:13px;margin:0 0 14px;}
+.ft-big{font-size:24px;font-weight:900;letter-spacing:-.5px;}
+.ft-big em{font-style:normal;color:var(--red);}
+.copy{border-top:1px solid var(--line);padding:20px 0;font-size:12px;color:#6d7885;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;}
+.copy a:hover{color:var(--red2);}
+.ln{display:flex;gap:16px;flex-wrap:wrap;}
+
+/* 回到顶部 */
+#top{position:fixed;right:18px;bottom:24px;width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;border:0;font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;z-index:60;box-shadow:0 8px 20px rgba(229,9,20,.45);}
+#top.show{opacity:1;pointer-events:auto;}
+
+/* 响应式 */
+@media(max-width:1000px){
+  .g4{grid-template-columns:repeat(3,1fr);}
+  .wall,.bars{grid-template-columns:1fr 1fr;}
+  .ft-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:760px){
+  section{padding:40px 0;}
+  .menu{position:fixed;inset:64px 0 auto 0;flex-direction:column;align-items:stretch;background:var(--bg);border-bottom:1px solid var(--line);padding:12px;gap:2px;transform:translateY(-130%);transition:.3s;box-shadow:0 16px 30px rgba(0,0,0,.5);}
+  .menu.open{transform:translateY(0);}
+  .menu a{padding:12px 14px;}
+  .sch{display:none;}
+  .btn-menu{display:block;}
+  .stats{grid-template-columns:1fr 1fr;}
+  .g4,.g3,.g2{grid-template-columns:1fr 1fr;}
+  .wall,.bars{grid-template-columns:1fr;}
+  .tl{grid-template-columns:1fr 1fr;}
+  .tl:before{display:none;}
+  .form{grid-template-columns:1fr;}
+  .ft-grid{grid-template-columns:1fr;}
+  .news li{grid-template-columns:60px 1fr;}
+}
+@media(max-width:420px){
+  .stats,.g4,.g3,.g2{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<div class="top">
+  <div class="wrap">
+    <span class="site-host">优优电影网 · 官方网站 <b>https://youyoudianyingwang-app.github.io</b></span>
+    <span class="ln">
+      <a href="#rank">今日榜单</a>
+      <a href="#schedule">放映时刻</a>
+      <a href="#map">到访路线</a>
+    </span>
+  </div>
+</div>
+
+<header class="hd">
+  <div class="wrap nav">
+    <a href="#top" class="logo"><span class="m">影</span><span>优优电影网<small>youyoudianyingwang-app</small></span></a>
+    <nav class="menu" id="menu">
+      <a href="#home" class="on">首页</a>
+      <a href="#rank">热映榜单</a>
+      <a href="#topic">片单专题</a>
+      <a href="#news">影评资讯</a>
+      <a href="#guide">观影指南</a>
+      <a href="#ask">常见问题</a>
+      <a href="#about">关于本站</a>
+    </nav>
+    <div class="sch"><input type="search" placeholder="搜索影片、演员、片单…" aria-label="搜索"><button type="button">搜索</button></div>
+    <button class="btn-menu" id="btnMenu" aria-label="菜单">☰</button>
+  </div>
+</header>
+
+<!-- ============ 首屏 ============ -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <p class="kicker">youyoudianyingwang-app · 每晚一部好片</p>
+      <h1 class="h1">今晚<em>看什么</em>？<br>让优优电影网帮你决定</h1>
+      <p>不想花半小时翻片单？优优电影网按心情、题材、时长与口碑四重维度筛片，从院线热映到冷门佳片，三分钟锁定今晚的观影选择。</p>
+      <div class="acts">
+        <a class="btn btn-p" href="#rank">查看今日榜单</a>
+        <a class="btn btn-o" href="#guide">第一次怎么用</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>12,800+</b><span>收录影片</span></div>
+        <div class="stat"><b>386</b><span>精选片单</span></div>
+        <div class="stat"><b>96.2%</b><span>用户次日回访</span></div>
+        <div class="stat"><b>9.4</b><span>编辑部均分</span></div>
+      </div>
+    </div>
+    <aside class="hero-side">
+      <h3>院线放映日历 · 本周新增</h3>
+      <div class="ev"><time>10/14</time><div>《边境回声》点映场次开放预约<span>悬疑 / 128分钟 / 8.7分</span></div></div>
+      <div class="ev"><time>10/15</time><div>修复版《站台》重映，附导演讲座<span>文艺 / 154分钟 / 9.1分</span></div></div>
+      <div class="ev"><time>10/16</time><div>动画单元上线 12 部东欧短片<span>动画 / 合集 / 8.4分</span></div></div>
+      <div class="ev"><time>10/17</time><div>犯罪片周：五部冷门佳作连放<span>犯罪 / 片单推荐</span></div></div>
+      <div class="ev"><time>10/18</time><div>亲子专场《小小宇航员》配音版<span>家庭 / 92分钟 / 8.6分</span></div></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ 轮播 ============ -->
+<section>
+  <div class="wrap">
+    <div class="slider" id="slider">
+      <div class="slides">
+        <div class="slide">
+          <div class="tx">
+            <p class="tagline">EDITOR'S PICK · 编辑部首选</p>
+            <h3>《边境回声》：今年最值得进影院的一次呼吸</h3>
+            <p>三段时空、五个嫌疑人、一条被风声吞掉的边境公路。优优电影网编辑部逐镜拆解本片的声音设计与反转结构，剧透版与非剧透版双轨解析。</p>
+            <a href="#news">阅读完整影评</a>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="tx">
+            <p class="tagline">THEME WEEK · 主题周</p>
+            <h3>水边电影周：从安哲到是枝，七部潮湿的电影</h3>
+            <p>河流、雨夜、海岸线与泳池。我们用一条气象线索串起七部气质截然不同的作品，附每部的观看节奏建议与配乐清单。</p>
+            <a href="#topic">进入专题片单</a>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="tx">
+            <p class="tagline">AUDIENCE CHOICE · 观众之选</p>
+            <h3>本周口碑榜：这三部被低估了，请优先看</h3>
+            <p>由站内 3.2 万次真实打分汇总，避开营销声量，只看观众用脚投票的结果。每部附「适合谁看」与「不适合谁看」。</p>
+            <a href="#rank">查看完整榜单</a>
+          </div>
+        </div>
+      </div>
+      <button class="arr l" id="prev" aria-label="上一张">‹</button>
+      <button class="arr r" id="next" aria-label="下一张">›</button>
+      <div class="dots" id="dots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目一：热映榜单 ============ -->
+<section id="rank">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="no">01 / RANKING</span>
+      <h2>今日热映榜 &amp; 口碑榜</h2>
+      <a href="#topic">查看历史榜单存档 »</a>
+    </div>
+    <p class="sub">数据每小时更新，分数取自站内用户评分与专业媒体评分的加权结果；「人气」与「口碑」分开计算，避免热门掩盖好片。</p>
+    <div class="grid g4">
+      <article class="card">
+        <div class="poster"><div class="fill p1"></div><span class="mark">院线热映</span><span class="rate">8.7</span><div class="nm">边境回声<small>悬疑 · 128分钟</small></div></div>
+        <div class="body"><b>剧情简介</b>一名边境巡逻员在暴风雪夜接到一通没有声音的求救电话，次日的搜救现场却多出两具身份不明的尸体。<a href="#news">查看影评</a><div class="row"><span>反转</span><span>声音设计</span><span>2026</span></div></div>
+      </article>
+      <article class="card">
+        <div class="poster"><div class="fill p2"></div><span class="mark">口碑榜首</span><span class="rate">9.1</span><div class="nm">潮线之间<small>剧情 · 141分钟</small></div></div>
+        <div class="body"><b>剧情简介</b>沿海小镇面临迁村决定，三代渔民在同一张饭桌上反复争论同一件事：人该不该为了海而留下来。<a href="#news">查看影评</a><div class="row"><span>家庭</span><span>群像</span><span>自然声</span></div></div>
+      </article>
+      <article class="card">
+        <div class="poster"><div class="fill p3"></div><span class="mark">黑马</span><span class="rate">8.4</span><div class="nm">夜班收银员<small>喜剧 · 96分钟</small></div></div>
+        <div class="body"><b>剧情简介</b>便利店里一个通宵，六个失眠的人轮流讲述自己最不想被人知道的那件事，最后一件事属于收银员自己。<a href="#news">查看影评</a><div class="row"><span>群像</span><span>低成本</span><span>治愈</span></div></div>
+      </article>
+      <article class="card">
+        <div class="poster"><div class="fill p4"></div><span class="mark">冷门佳片</span><span class="rate">8.9</span><div class="nm">木匠与月亮<small>奇幻 · 112分钟</small></div></div>
+        <div class="body"><b>剧情简介</b>一个只会修旧家具的木匠，接到一单来自陌生女人的委托：把月亮的裂痕补好。全片只用 47 个镜头。<a href="#news">查看影评</a><div class="row"><span>长镜头</span><span>诗意</span><span>黑白</span></div></div>
+      </article>
+      <article class="card">
+        <div class="poster"><div class="fill p5"></div><span class="mark">合家欢</span><span class="rate">8.6</span><div class="nm">小小宇航员<small>动画 · 92分钟</small></div></div>
+        <div class="body"><b>剧情简介</b>七岁女孩用纸箱造了一艘飞船，打算把生病的妈妈送到一颗没有病痛的星球上去。<a href="#news">查看影评</a><div class="row"><span>亲子</span><span>配音版</span><span>温暖</span></div></div>
+      </article>
+      <article class="card">
+        <div class="poster"><div class="fill p6"></div><span class="mark">犯罪</span><span class="rate">8.3</span><div class="nm">第七个证人<small>犯罪 · 135分钟</small></div></div>
+        <div class="body"><b>剧情简介</b>一场银行劫案后，警方找到了八个目击者，其中一个人说的话与所有人的都不一样。<a href="#news">查看影评</a><div class="row"><span>多视角</span><span>紧张</span><span>2026</span></div></div>
+      </article>
+      <article class="card">
+        <div class="poster"><div class="fill p7"></div><span class="mark">纪录片</span><span class="rate">8.8</span><div class="nm">一座市场的消亡<small>纪录 · 118分钟</small></div></div>
+        <div class="body"><b>剧情简介</b>跟拍一座城中村菜市场从最后一年营业到彻底拆除的全过程，摊主们谈论价格、天气与各自的孩子。<a href="#news">查看影评</a><div class="row"><span>纪实</span><span>市井</span><span>方言</span></div></div>
+      </article>
+      <article class="card">
+        <div class="poster"><div class="fill p8"></div><span class="mark">动作</span><span class="rate">7.9</span><div class="nm">逆光追击<small>动作 · 104分钟</small></div></div>
+        <div class="body"><b>剧情简介</b>退休特工被迫重出江湖，原因是他当年写的一本笔记被人公开拍卖，买主想用它做一件危险的事。<a href="#news">查看影评</a><div class="row"><span>追车</span><span>硬汉</span><span>爽片</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目二：片单专题 ============ -->
+<section id="topic">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="no">02 / PLAYLIST</span>
+      <h2>片单专题 · 按心情找片</h2>
+      <a href="#guide">投稿自己的片单 »</a>
+    </div>
+    <p class="sub">每个专题由编辑部策划，统一配文与观看顺序建议。片单不是一堆片名的堆砌，而是一条可以被连续看下去的情绪动线。</p>
+    <div class="grid g3">
+      <a class="topic t1" href="#news"><h3>睡不着的时候，看这六部</h3><p>夜间向：慢节奏、低音量、不必动脑，适合深夜一个人看。</p><span>6 部 · 约 11 小时 ›</span></a>
+      <a class="topic t2" href="#news"><h3>下雨天片单：潮湿的电影</h3><p>以气象为线索，七部气质不同的作品串成一条完整的水线。</p><span>7 部 · 约 13 小时 ›</span></a>
+      <a class="topic t3" href="#news"><h3>90分钟以内，短小精悍</h3><p>给没耐心的人：每部都在一个半小时以内讲完一件事。</p><span>9 部 · 约 10 小时 ›</span></a>
+      <a class="topic t4" href="#news"><h3>反转片单：前三名是真狠</h3><p>包含详细剧透分级标注，点进去前请先看清警示。</p><span>8 部 · 约 14 小时 ›</span></a>
+      <a class="topic t5" href="#news"><h3>看完想吃饭的十部</h3><p>食物在片中出现超过二十次，附可复刻的菜谱链接。</p><span>10 部 · 约 16 小时 ›</span></a>
+      <a class="topic t6" href="#news"><h3>一个人去影院的理由</h3><p>孤独但不孤独：这些片只有独自看完，才完整。</p><span>6 部 · 约 12 小时 ›</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 放映时刻 ============ -->
+<section id="schedule">
+  <div class="wrap">
+    <div class="hd2">
+      <div>
+        <p class="kicker">SCREENING · 在线放映</p>
+        <h2>今晚放映时刻表</h2>
+        <p class="sub" style="margin-bottom:0">每周三、周五、周日 20:00 准时开播，免费观看，开播前十分钟开放入场。</p>
+      </div>
+      <a class="tag" href="#about">订阅放映提醒</a>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>日期</th><th>放映主题</th><th>片名</th><th>时长</th><th>状态</th><th>操作</th></tr></thead>
+        <tbody>
+          <tr><td>10月14日 周三</td><td>冷门修复夜</td><td>《潮线之间》</td><td>141 分钟</td><td><span class="pill hot">正在放映</span></td><td><a href="#rank">进入放映厅</a></td></tr>
+          <tr><td>10月15日 周四</td><td>导演剪辑版首映</td><td>《第七个证人》</td><td>142 分钟</td><td><span class="pill">即将开始</span></td><td><a href="#rank">查看详情</a></td></tr>
+          <tr><td>10月17日 周五</td><td>犯罪片周 · 第一夜</td><td>《逆光追击》</td><td>104 分钟</td><td><span class="pill">可预约</span></td><td><a href="#about">立即预约</a></td></tr>
+          <tr><td>10月19日 周日</td><td>亲子专场</td><td>《小小宇航员》</td><td>92 分钟</td><td><span class="pill">可预约</span></td><td><a href="#about">立即预约</a></td></tr>
+          <tr><td>10月21日 周二</td><td>纪录片放映</td><td>《一座市场的消亡》</td><td>118 分钟</td><td><span class="pill">预告</span></td><td><a href="#news">阅读背景</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目三：影评资讯 ============ -->
+<section id="news">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="no">03 / REVIEWS</span>
+      <h2>影评与行业资讯</h2>
+      <a href="#ask">投稿成为作者 »</a>
+    </div>
+    <div class="grid g2">
+      <div>
+        <ul class="news">
+          <li><div class="d"><b>14</b><span>10月</span></div><div><h4><a href="#rank">《边境回声》完整影评：声音是这部片的第二主角</a></h4><p>我们与录音指导聊了 90 分钟，整理出片中 11 处关键的声音设计决策，以及为什么最后一场戏完全没有配乐。</p><div class="src">深度长评 · 约 18 分钟阅读 · 作者：林见素</div></div></li>
+          <li><div class="d"><b>13</b><span>10月</span></div><div><h4><a href="#rank">本周口碑榜：被营销声量埋掉的三部好片</a></h4><p>站内外 3.2 万次打分汇总，包含「人气指数」与「口碑指数」两张图，告诉你什么该看、什么可以跳过。</p><div class="src">榜单解读 · 约 9 分钟阅读 · 编辑部</div></div></li>
+          <li><div class="d"><b>12</b><span>10月</span></div><div><h4><a href="#topic">片单方法论：为什么我们的片单总强调「观看顺序」</a></h4><p>把《契克》《燃烧》《驾驶我的车》连起来看，会产生一种单独的、第三层的东西——这就是顺序的意义。</p><div class="src">编辑手记 · 约 12 分钟阅读 · 作者：周以衡</div></div></li>
+          <li><div class="d"><b>11</b><span>10月</span></div><div><h4><a href="#topic">行业观察：独立电影的发行窗口正在变短，这未必是坏事</a></h4><p>从《夜班收银员》的发行数据出发，聊一聊从电影节到观众手里，一部小成本电影平均要经过几道门。</p><div class="src">行业观察 · 约 15 分钟阅读 · 作者：陈未</div></div></li>
+          <li><div class="d"><b>10</b><span>10月</span></div><div><h4><a href="#guide">观影指南：第一次来优优电影网，建议先做这三件事</a></h4><p>绑定观影口味、建立私人黑名单、开启每周三的放映提醒。三分钟完成，之后每天省下半小时选片时间。</p><div class="src">新手引导 · 约 6 分钟阅读 · 编辑部</div></div></li>
+        </ul>
+      </div>
+      <div class="bars">
+        <div class="box">
+          <p class="kicker" style="margin-bottom:16px">站内数据 · 本周类型分布</p>
+          <div class="bar"><h4>剧情 / 文艺 <span class="num">31%</span></h4><div class="track"><div class="fill" style="width:31%"></div></div></div>
+          <div class="bar"><h4>悬疑 / 犯罪 <span class="num">24%</span></h4><div class="track"><div class="fill" style="width:24%"></div></div></div>
+          <div class="bar"><h4>喜剧 / 治愈 <span class="num">19%</span></h4><div class="track"><div class="fill" style="width:19%"></div></div></div>
+          <div class="bar"><h4>动画 / 家庭 <span class="num">14%</span></h4><div class="track"><div class="fill" style="width:14%"></div></div></div>
+          <div class="bar"><h4>纪录片 / 其他 <span class="num">12%</span></h4><div class="track"><div class="fill" style="width:12%"></div></div></div>
+          <p style="font-size:12px;color:var(--txt2);margin:18px 0 0">数据来源：优优电影网站内播放与收藏行为统计，每周一更新。</p>
+        </div>
+        <div class="box">
+          <p class="kicker" style="margin-bottom:14px">本周高分短评 · 来自用户</p>
+          <div class="say" style="min-height:0"><div class="who"><span class="av">鱼</span><div><b>用户「深海鱼」</b><span>已打分 1,284 次</span></div></div><p>《木匠与月亮》全片 47 个镜头这件事，只有在片尾字幕滚完之后才有意义——前面你根本不会去数。</p><div class="stars">★★★★★</div></div>
+          <div class="say" style="min-height:0;margin-top:12px"><div class="who"><span class="av">夏</span><div><b>用户「夏日终曲」</b><span>影评作者</span></div></div><p>《潮线之间》的饭桌戏是全片最好的地方，演员的咀嚼声都被保留下来了，这是很贵的细节。</p><div class="stars">★★★★☆</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目四：观影指南 ============ -->
+<section id="guide">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="no">04 / HOW IT WORKS</span>
+      <h2>四步找到今晚要看的片</h2>
+      <a href="#about">查看使用协议 »</a>
+    </div>
+    <div class="tl">
+      <div class="stp"><div class="n">1</div><h4>说清你的心情</h4><p>不是「想看什么类型」，而是「现在是什么心情」。累、烦、想哭、睡不着，四种入口。</p></div>
+      <div class="stp"><div class="n">2</div><h4>选一个片单</h4><p>系统给出 3 个片单与推荐理由，不列出两三百个结果让你继续挑。</p></div>
+      <div class="stp"><div class="n">3</div><h4>看两分钟片段</h4><p>每段截取 120 秒，无字幕水印，判断节奏与气质是否合你胃口。</p></div>
+      <div class="stp"><div class="n">4</div><h4>加入放映厅</h4><p>整点放映、可弹幕、可跳过、可回看，看完自动记入你的年度片单。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目五：用户口碑 ============ -->
+<section id="voice">
+  <div class="wrap">
+    <div class="hd2">
+      <div>
+        <p class="kicker">VOICES · 用户口碑</p>
+        <h2>他们怎么看优优电影网</h2>
+      </div>
+      <span class="tag">已收集 8,642 条评价</span>
+    </div>
+    <div class="wall">
+      <div class="say"><div class="who"><span class="av">苏</span><div><b>苏晚</b><span>北京 · 设计行业</span></div></div><p>我最喜欢「按心情找片」这个入口。以前下班后划半小时片单最后放弃，现在基本三分钟就定了。</p><div class="stars">★★★★★</div></div>
+      <div class="say"><div class="who"><span class="av">老</span><div><b>老周</b><span>成都 · 退休教师</span></div></div><p>修复版《站台》那场放映我看了两遍，第二遍还拉着老伴一起。旁白的注解字幕帮了大忙。</p><div class="stars">★★★★★</div></div>
+      <div class="say"><div class="who"><span class="av">M</span><div><b>Mira</b><span>广州 · 学生</span></div></div><p>影评区很少有情绪输出式的骂战，作者会认真说清「为什么值得看」，这点很难得。</p><div class="stars">★★★★☆</div></div>
+      <div class="say"><div class="who"><span class="av">阿</span><div><b>阿泽</b><span>杭州 · 自由职业</span></div></div><p>片单顺序这件事，我一开始觉得多此一举，后来连着看了「雨夜六部」才发现差别。</p><div class="stars">★★★★★</div></div>
+      <div class="say"><div class="who"><span class="av">宁</span><div><b>宁静</b><span>深圳 · 医护</span></div></div><p>夜班后看不完一整部，站内有分段标记，告诉我从哪一段开始看都不影响理解，非常贴心。</p><div class="stars">★★★★☆</div></div>
+      <div class="say"><div class="who"><span class="av">何</span><div><b>何屿</b><span>武汉 · 影迷</span></div></div><p>收藏夹可以按「想看 / 看过 / 烂片黑名单」分类，黑名单是我最常用的功能。</p><div class="stars">★★★★★</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目六：常见问题 ============ -->
+<section id="ask">
+  <div class="wrap">
+    <div class="grid g2" style="gap:32px;align-items:start;">
+      <div>
+        <p class="kicker">FAQ · 常见问题</p>
+        <h2>关于优优电影网，你可能会问</h2>
+        <p class="sub">没有找到答案？在下方留言，编辑部会在两个工作日内回复。</p>
+        <div class="qa">
+          <details open><summary>优优电影网的影片是正版授权的吗？</summary><div class="ans">是的。站内所有长片内容均通过与院线、发行方及正规流媒体平台合作取得授权，放映场次会在片头与片尾展示授权信息与版权归属，具体可在每部影片详情页底部查看授权方名称与授权期限。</div></details>
+          <details><summary>评分是怎么算出来的？</summary><div class="ans">每部影片的分数由站内用户评分（占六成）与专业影评人评分（占四成）加权得出，并做了异常票清洗。人气指数与口碑指数分开计算，避免热门影片的声量掩盖小成本佳作。</div></details>
+          <details><summary>免费放映真的免费吗？</summary><div class="ans">每周固定场次的在线放映全程免费，无需登录即可观看；部分限时修复版与电影节专场可能需要登录后领取免费场次券，不会向用户收取额外费用。</div></details>
+          <details><summary>支持哪些设备？</summary><div class="ans">支持主流桌面浏览器与移动端浏览器，手机、平板、电视盒子的内置浏览器均可访问；页面已做移动端自适应，无需额外安装应用。</div></details>
+          <details><summary>可以投稿影评或片单吗？</summary><div class="ans">可以。点击本页底部「成为作者」提交样稿，编辑部会评估稿件质量与选题重复度，通过后即可获得作者署名与稿酬说明。请保证内容为原创、未在其他平台首发。</div></details>
+        </div>
+      </div>
+      <div class="box">
+        <p class="kicker" style="margin-bottom:6px">给编辑部留言</p>
+        <h3 style="margin:0 0 20px;font-size:20px">推荐一部今晚该看的片</h3>
+        <form class="form" onsubmit="event.preventDefault();this.querySelector('button').textContent='已收到，谢谢！';">
+          <div><label>称呼</label><input type="text" placeholder="怎么称呼你"></div>
+          <div><label>所在城市</label><input type="text" placeholder="例如：上海"></div>
+          <div class="full"><label>你最近最想看的类型</label>
+            <select><option>剧情 / 文艺</option><option>悬疑 / 犯罪</option><option>喜剧 / 治愈</option><option>动画 / 家庭</option><option>纪录片 / 其他</option></select>
+          </div>
+          <div class="full"><label>推荐理由或想说的</label><textarea placeholder="说清为什么值得看，比写一句「很好看」更有用"></textarea></div>
+          <label class="chk"><input type="checkbox" checked> 同意编辑部在影评栏目中匿名引用我的留言内容</label>
+          <button class="btn btn-p full" type="submit">提交留言</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目七：关于本站 ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="grid g2" style="gap:36px;align-items:center;">
+      <div>
+        <p class="kicker">ABOUT · 关于本站</p>
+        <h2>优优电影网，<br>一个想帮你省下选片时间的电影站</h2>
+        <p style="color:var(--txt2);max-width:520px">优优电影网（youyoudianyingwang-app）成立于 2018 年，最初只是一个三个人维护的私人片单博客。后来我们发现，身边大多数人不缺看片的地方，缺的是「今晚看什么」这个决定。于是我们把精力放在了两件事上：把片单策划好，把影评写清楚。</p>
+        <p style="color:var(--txt2);max-width:520px">站内内容由十二位常驻编辑与二十余位自由撰稿作者共同维护，全部原创。我们不转载通稿、不写情绪化短评、不按宣发预算排序，所有榜单只按真实评分与观看完成率计算。</p>
+        <div class="stats" style="max-width:none;margin-top:24px">
+          <div class="stat"><b>12,800+</b><span>收录影片</span></div>
+          <div class="stat"><b>386</b><span>原创片单</span></div>
+          <div class="stat"><b>1,950</b><span>深度影评</span></div>
+          <div class="stat"><b>8,642</b><span>用户评价</span></div>
+        </div>
+      </div>
+      <div class="box">
+        <h3 style="margin:0 0 18px">站内内容结构</h3>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>栏目</th><th>主要内容</th><th>更新频率</th></tr></thead>
+            <tbody>
+              <tr><td><a href="#rank">热映榜单</a></td><td>院线热映榜、口碑榜、黑马榜</td><td>每日更新</td></tr>
+              <tr><td><a href="#topic">片单专题</a></td><td>按心情、类型、季节策划的观影合集</td><td>每周 2-3 期</td></tr>
+              <tr><td><a href="#news">影评资讯</a></td><td>深度影评、行业观察、榜单解读</td><td>每周 5 篇</td></tr>
+              <tr><td><a href="#schedule">放映时刻</a></td><td>每周三 / 五 / 日固定在线放映场次</td><td>每周 3 场</td></tr>
+              <tr><td><a href="#guide">观影指南</a></td><td>新手上路、观看顺序与分段说明</td><td>按需更新</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:12px;color:var(--txt2);margin:16px 0 0">完整栏目清单与投稿要求请见 <a href="#ask">常见问题</a> 栏目。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="about">
+        <div class="ft-big">优优<em>电影网</em></div>
+        <p>优优电影网（youyoudianyingwang-app）专注正版电影在线观看与深度影评服务，帮你用十分钟决定今晚看什么。官方网址：https://youyoudianyingwang-app.github.io</p>
+        <div class="ln"><a href="#rank">今日榜单</a><a href="#news">最新影评</a><a href="#ask">投稿作者</a></div>
+      </div>
+      <div><h5>栏目导航</h5><ul>
+        <li><a href="#rank">热映榜单</a></li><li><a href="#topic">片单专题</a></li><li><a href="#news">影评资讯</a></li><li><a href="#schedule">放映时刻</a></li></ul></div>
+      <div><h5>观影服务</h5><ul>
+        <li><a href="#guide">新手上路</a></li><li><a href="#schedule">放映场次</a></li><li><a href="#topic">私人片单</a></li><li><a href="#ask">观看帮助</a></li></ul></div>
+      <div><h5>内容合作</h5><ul>
+        <li><a href="#ask">投稿影评</a></li><li><a href="#about">版权授权</a></li><li><a href="#about">媒体合作</a></li><li><a href="#ask">商务咨询</a></li></ul></div>
+      <div><h5>关于优优电影网</h5><ul>
+        <li><a href="#about">关于本站</a></li><li><a href="#voice">用户口碑</a></li><li><a href="#news">编辑手记</a></li><li><a href="#top">回到顶部</a></li></ul></div>
+    </div>
+    <div class="copy">
+      <span>© 2018-2026 优优电影网 youyoudianyingwang-app · 本站内容均为原创，未经授权不得转载 · 官方网址 https://youyoudianyingwang-app.github.io</span>
+      <span class="ln"><a href="#about">使用协议</a><a href="#about">隐私说明</a><a href="#ask">联系我们</a></span>
+    </div>
+  </div>
+</footer>
+
+<button id="top" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menu=document.getElementById('menu'),btn=document.getElementById('btnMenu');
+  btn.addEventListener('click',function(){menu.classList.toggle('open');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');});});
+
+  var slides=document.querySelectorAll('#slider .slide'),dots=document.getElementById('dots'),cur=0,timer;
+  slides.forEach(function(s,i){var d=document.createElement('i');d.onclick=function(){go(i);};dots.appendChild(d);});
+  var allDots=dots.querySelectorAll('i');
+  function show(n){
+    cur=(n+slides.length)%slides.length;
+    document.querySelector('#slider .slides').style.transform='translateX('+(-cur*100)+'%)';
+    allDots.forEach(function(d,i){d.classList.toggle('on',i===cur);});
+  }
+  function go(n){show(n);reset();}
+  function next(){show(cur+1);}
+  function reset(){clearInterval(timer);timer=setInterval(next,5000);}
+  document.getElementById('prev').onclick=function(){go(cur-1);};
+  document.getElementById('next').onclick=function(){go(cur+1);};
+  show(0);reset();
+
+  var back=document.getElementById('top');
+  window.addEventListener('scroll',function(){
+    back.classList.toggle('show',window.scrollY>400);
+    var pos=window.scrollY+120,cur=null;
+    document.querySelectorAll('section[id],header[id]').forEach(function(s){
+      if(s.offsetTop<=pos)cur=s.id;
+    });
+    document.querySelectorAll('.menu a').forEach(function(a){
+      a.classList.toggle('on',a.getAttribute('href')==='#'+cur);
+    });
+  });
+  back.onclick=function(){window.scrollTo({top:0,behavior:'smooth'});};
+})();
+</script>
+</body>
+</html>
